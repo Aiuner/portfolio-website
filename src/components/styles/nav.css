@@ -1,0 +1,24 @@
+
+.nav-content {
+  margin: 0 auto;
+  min-height: 100%;
+  text-align: center;
+  padding: 1vw;
+
+  border-right: 2px solid black;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  width: 16vw;
+}
+
+nav {
+  min-height: 35vh;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}

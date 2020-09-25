@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-export default function Layout() {
+import Nav from '../components/Nav';
+
+import './layout.css';
+
+export default function Layout(props) {
   return (
-    <div>
-      
-    </div>
+    <>
+      <main>
+        <div className="nav-menu">
+          <Nav />
+        </div>
+        <div className="page-content">
+          {props.children}
+        </div>
+      </main>
+    </>
   )
 }

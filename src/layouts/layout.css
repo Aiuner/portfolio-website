@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
+main {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.nav-panel {
+  text-align: center;
+  width: calc(100% - 1vw - 2px);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.page-content {
+  margin: 0 auto;
+  width: calc(100% - 1vw);
+  grid-column: 2;
+  grid-row: 1;
+  padding: 1vw;
+}
