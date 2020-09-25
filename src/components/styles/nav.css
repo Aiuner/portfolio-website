@@ -5,7 +5,9 @@
   text-align: center;
   padding: 1vw;
 
-  border-right: 2px solid black;
+  background-color: #090B10;
+  border-right: 1px solid black;
+  box-shadow: 0 0 10px black;
 }
 
 .logo {

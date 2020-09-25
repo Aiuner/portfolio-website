@@ -13,7 +13,6 @@ import './App.css';
 function App() {
   return (
     <Layout>
-      <h1>This is the home page.</h1>
       <Switch>
         <Route path='/about'>
           <About />

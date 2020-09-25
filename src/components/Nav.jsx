@@ -16,15 +16,15 @@ export default function Nav() {
           </li>
 
           <li className="page-links">
-            <NavLink to="/about" activeClassName="current-path">Article Index</NavLink>
+            <NavLink to="/about" activeClassName="current-path">About Me</NavLink>
           </li>
 
           <li className="page-links">
-            <NavLink to="/projects" activeClassName="current-path">Article Index</NavLink>
+            <NavLink to="/projects" activeClassName="current-path">My Projects</NavLink>
           </li>
 
           <li className="page-links">
-            <NavLink to="/contact-me" activeClassName="current-path">Article Index</NavLink>
+            <NavLink to="/contact-me" activeClassName="current-path">Contact Me</NavLink>
           </li>
         </ul>
       </nav>
