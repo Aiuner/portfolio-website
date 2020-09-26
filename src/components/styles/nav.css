@@ -23,4 +23,28 @@ nav {
 ul {
   padding-left: 0;
   list-style-type: none;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.page-links {
+  padding: 2px 0 2px 0;
+  width: 100%;
+}
+
+.page-links a {
+  text-decoration: none;
+
+  color: #541a8b;
+}
+
+.current-path {
+  display: block;
+
+  color: white !important;
+  text-shadow: 0 0 3px white;
+  background: #006a85;
+  background: linear-gradient(90deg, rgba(0,106,133,0) 0%, rgba(0,106,133,1) 50%, rgba(0,106,133,0) 100%);
 }

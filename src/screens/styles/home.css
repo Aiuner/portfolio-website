@@ -1,0 +1,11 @@
+.home {
+  color: transparent !important;
+}
+
+.home:hover {
+  background-color: transparent;
+}
+
+.home.active {
+  background-color: transparent;
+}

@@ -30,6 +30,7 @@ main {
   position: absolute;
   left: 20%;
   right: 0;
+  height: 42px;
   width: calc(80% - 16px);
   padding: 0;
   padding-left: 16px;
@@ -40,9 +41,6 @@ main {
 }
 
 .tab button {
-  background-color: inherit;
-  color: #100B09;
-  font-weight: bold;
   float: left;
   border: none;
   outline: none;
@@ -50,6 +48,12 @@ main {
   padding: 14px 16px;
   transition: 0.3s;
   margin-right: 0;
+
+  background-color: inherit;
+  color: #100B09;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 .tab button:hover {
@@ -62,9 +66,11 @@ main {
 
 .tabcontent {
   padding: 0.5vh 2vw;
+  padding-top: calc(0.5vh + 42px);
   min-height: 70vh;
-  color: #EDCB62;
   border-top: none;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
+
+  color: white;
 }
