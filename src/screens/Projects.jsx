@@ -1,40 +1,30 @@
 import React, { useState } from 'react';
 
 export default function Projects() {
-  const [tabView, setTabView] = useState('Projects');
+  const [tabView, setTabView] = useState('');
 
   const openTab = (tab) => {
     setTabView(tab);
   }
 
   return (
-    <div>
+    <>
       <div className="tab">
-        <button className="tablinks" onClick={() => openTab('Projects')}>Projects</button>
-        <button className="tablinks" onClick={() => openTab('Group-Projects')}>Group Projects</button>
-        <button className="tablinks" onClick={() => openTab('Other-Projects')}>Other Projects</button>
+        <button className="tablinks" onClick={() => openTab('CodingProjects')}>Coding Projects</button>
+        <button className="tablinks" onClick={() => openTab('OtherProjects')}>Other Projects</button>
       </div>
 
-      { tabView === 'Projects' && 
-        <div id="Projects" className="tabcontent">
-          <p>Temporary Stuff.</p>
-          {/* <ArticleTab article={article} deleteThisArticle={deleteThisArticle} setTabView={setTabView} currentUser={currentUser} /> */}
+      { tabView === 'CodingProjects' && 
+        <div id="CodingProjects" className="content">
+          <p>Something</p>
         </div>
       }
 
-      { tabView === 'Group-Projects' &&
-        <div id="Group-Projects" className="tabcontent">
-          <p>Other Stuff.</p>
-          {/* <ArticleEditor article={article} editThisArticle={editThisArticle} /> */}
+      { tabView === 'OtherProjects' &&
+        <div id="OtherProjects" className="content">
+          <p>Something else</p>
         </div>
       }
-
-      { tabView === 'Other-Projects' &&
-        <div id="Other-Projects" className="tabcontent">
-          <p>More stuff.</p>
-          {/* <CommentsTab comments={comments} handleSubmitComment={handleSubmitComment} currentUser={currentUser} /> */}
-        </div>
-      }
-    </div>
+    </>
   );
 }

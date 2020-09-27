@@ -28,7 +28,7 @@ export default function Nav() {
           </li>
         </ul>
       </nav>
-      <h1>Footer stuff will go down here.</h1>
+      <p className="footer">© 2020.<br/> Cassandra Doeinck. All rights reserved.</p>
     </div>
   );
 }

@@ -17,7 +17,7 @@
 }
 
 nav {
-  min-height: 35vh;
+  min-height: 63vh;
 }
 
 ul {
@@ -47,4 +47,8 @@ ul {
   text-shadow: 0 0 3px white;
   background: #006a85;
   background: linear-gradient(90deg, rgba(0,106,133,0) 0%, rgba(0,106,133,1) 50%, rgba(0,106,133,0) 100%);
+}
+
+.footer {
+  font-size: 12px;
 }

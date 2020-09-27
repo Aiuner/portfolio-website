@@ -12,7 +12,6 @@ main {
   width: calc(100% - 1vw - 2px);
   grid-column: 1;
   grid-row: 1;
-  z-index: 2;
 }
 
 .page-content {
@@ -21,7 +20,6 @@ main {
   grid-column: 2;
   grid-row: 1;
   padding: 1vw;
-  z-index: -2;
 }
 
 /* This is for the tabs, which may appear on multiple pages. */
@@ -40,8 +38,18 @@ main {
   background-color: #006a85;
 }
 
+.tab-placeholder-text {
+  padding-left: 16px;
+
+  color: #100B09;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+}
+
 .tab button {
   float: left;
+  height: 42px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -57,20 +65,20 @@ main {
 }
 
 .tab button:hover {
-  background-color: #441c05;
+  color: white !important;
+  text-shadow: 0 0 3px white;
+  background: #01a6cf;
+  background: linear-gradient(90deg, rgba(1,166,207,0) 0%, rgba(1,166,207,1) 50%, rgba(1,166,207,0) 100%);
 }
 
-.tab button.active {
-  background-color: #441c05;
+.tab button:active {
+  color: white !important;
+  text-shadow: 0 0 3px white;
+  background: #01a6cf;
+  background: linear-gradient(90deg, rgba(1,166,207,0) 0%, rgba(1,166,207,1) 50%, rgba(1,166,207,0) 100%);
 }
 
-.tabcontent {
-  padding: 0.5vh 2vw;
+.content {
+  padding: 0.5vh .5vw;
   padding-top: calc(0.5vh + 42px);
-  min-height: 70vh;
-  border-top: none;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-
-  color: white;
 }

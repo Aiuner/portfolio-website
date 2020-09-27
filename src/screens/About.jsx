@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
 export default function About() {
-  const [tabView, setTabView] = useState('Summary');
+  const [tabView, setTabView] = useState('');
 
   const openTab = (tab) => {
     setTabView(tab);
   }
 
   return (
-    <div>
+    <>
       <div className="tab">
         <button className="tablinks" onClick={() => openTab('Summary')}>Summary</button>
         <button className="tablinks" onClick={() => openTab('Background')}>Background</button>
@@ -17,32 +17,28 @@ export default function About() {
       </div>
 
       { tabView === 'Summary' && 
-        <div id="Summary" className="tabcontent">
+        <div id="Summary" className="content">
           <p>Temporary Stuff.</p>
-          {/* <ArticleTab article={article} deleteThisArticle={deleteThisArticle} setTabView={setTabView} currentUser={currentUser} /> */}
         </div>
       }
 
       { tabView === 'Background' &&
-        <div id="Background" className="tabcontent">
+        <div id="Background" className="content">
           <p>Other Stuff.</p>
-          {/* <ArticleEditor article={article} editThisArticle={editThisArticle} /> */}
         </div>
       }
 
       { tabView === 'Skills' &&
-        <div id="Skills" className="tabcontent">
+        <div id="Skills" className="content">
           <p>Other Stuff.</p>
-          {/* <ArticleEditor article={article} editThisArticle={editThisArticle} /> */}
         </div>
       }
 
       { tabView === 'Interests' &&
-        <div id="Interests" className="tabcontent">
+        <div id="Interests" className="content">
           <p>Other Stuff.</p>
-          {/* <ArticleEditor article={article} editThisArticle={editThisArticle} /> */}
         </div>
       }
-    </div>
+    </>
   )
 }
