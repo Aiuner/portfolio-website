@@ -26,28 +26,49 @@ export default function Projects() {
   }
 
   const selectProject = (name) => {
-    updateDisplayedProject(name);
-    updateCurrentProject(name);
     switch(displayedProject) {
       case 'pokemon-dareda':
+        updateProjImg('');
+        updateProjLink('https://aiuner.github.io/Pokemon-DareDa/');
+        updateProjCode('https://github.com/Aiuner/Pokemon-DareDa');
         break;
       case 'vvg':
+        updateProjImg('');
+        updateProjLink('https://voids-virtual-grimoire.netlify.app/');
+        updateProjCode('https://github.com/Aiuner/Voids-Virtual-Grimoire');
         break;
       case 'full-stack-blog':
         updateProjImg(fsbImg);
+        updateProjLink('https://wizardly-goldwasser-cbed0a.netlify.app/');
+        updateProjCode('https://github.com/Aiuner/full-stack-blog');
         break;
       case 'ehr':
+        updateProjImg('');
+        updateProjLink('https://elastic-lovelace3-0a232e.netlify.app/');
+        updateProjCode('https://github.com/Aiuner/Eleventh-Hour-Rescue-Redesign');
         break;
       case 'apotheCo':
+        updateProjImg('');
+        updateProjLink('https://musing-nightingale-ab990b.netlify.app/');
+        updateProjCode('https://github.com/Aiuner/ApotheCo');
         break;
       case 'voids-portfolio':
+        updateProjImg('');
+        updateProjLink('https://www.cassandralynn.dev');
+        updateProjCode('https://github.com/Aiuner/portfolio-website');
         break;
       // artistic projects below
       case 'totg':
+        updateProjImg('');
+        updateProjLink('https://store.steampowered.com/app/764410/Trials_of_the_Gauntlet/');
+        updateProjCode('');
         break;
+      // default condition
       default:
         break;
     }
+    updateDisplayedProject(name);
+    updateCurrentProject(name);
   }
 
   return (
