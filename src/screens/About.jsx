@@ -48,7 +48,6 @@ export default function About() {
             <h1 className="skill-section">Programming</h1>
             <ul className="skills">
               <li>C++</li>
-              <li>Crafts</li>
               <li>Cascading Style Sheets (CSS)</li>
               <li>Express.js</li>
               <li>Git</li>
