@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import dareDa from '../assets/pokemon-dareda/dareda.png';
+import vvg from '../assets/vvg/vvg.png';
 import fsbImg from '../assets/full-stack-blog/full-stack-blog-home.png';
+import ehr from '../assets/ehr/ehr.png';
+
 
 import './styles/projects.css';
 
@@ -12,9 +16,9 @@ export default function Projects() {
   const [displayedProject, updateDisplayedProject] = useState('pokemon-dareda');
   const [currentProject, updateCurrentProject] = useState('pokemon-dareda');
 
-  const [projImg, updateProjImg] = useState(fsbImg);
-  const [projLink, updateProjLink] = useState('');
-  const [projCode, updateProjCode] = useState('');
+  const [projImg, updateProjImg] = useState(dareDa);
+  const [projLink, updateProjLink] = useState('https://aiuner.github.io/Pokemon-DareDa/');
+  const [projCode, updateProjCode] = useState('https://github.com/Aiuner/Pokemon-DareDa');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,12 +32,12 @@ export default function Projects() {
   const selectProject = (name) => {
     switch(name) {
       case 'pokemon-dareda':
-        updateProjImg('');
+        updateProjImg(dareDa);
         updateProjLink('https://aiuner.github.io/Pokemon-DareDa/');
         updateProjCode('https://github.com/Aiuner/Pokemon-DareDa');
         break;
       case 'vvg':
-        updateProjImg('');
+        updateProjImg(vvg);
         updateProjLink('https://voids-virtual-grimoire.netlify.app/');
         updateProjCode('https://github.com/Aiuner/Voids-Virtual-Grimoire');
         break;
@@ -43,7 +47,7 @@ export default function Projects() {
         updateProjCode('https://github.com/Aiuner/full-stack-blog');
         break;
       case 'ehr':
-        updateProjImg('');
+        updateProjImg(ehr);
         updateProjLink('https://elastic-lovelace3-0a232e.netlify.app/');
         updateProjCode('https://github.com/Aiuner/Eleventh-Hour-Rescue-Redesign');
         break;
