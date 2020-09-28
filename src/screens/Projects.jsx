@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+import fsbImg from '../assets/full-stack-blog/full-stack-blog-home.png';
 
 import './styles/projects.css';
 
@@ -8,9 +11,10 @@ export default function Projects() {
 
   const [displayedProject, updateDisplayedProject] = useState('pokemon-dareda');
   const [currentProject, updateCurrentProject] = useState('pokemon-dareda');
-  const projImg= null;
-  const projLink= null;
-  const projCode= null;
+
+  const [projImg, updateProjImg] = useState(fsbImg);
+  const [projLink, updateProjLink] = useState('');
+  const [projCode, updateProjCode] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,12 +28,13 @@ export default function Projects() {
   const selectProject = (name) => {
     updateDisplayedProject(name);
     updateCurrentProject(name);
-    switch(name) {
+    switch(displayedProject) {
       case 'pokemon-dareda':
         break;
       case 'vvg':
         break;
       case 'full-stack-blog':
+        updateProjImg(fsbImg);
         break;
       case 'ehr':
         break;
@@ -45,10 +50,6 @@ export default function Projects() {
     }
   }
 
-  
-
-
-
   return (
     <>
       <div className="tab">
@@ -62,35 +63,36 @@ export default function Projects() {
             <ul className="projects">
               <li className="project-names">
                 <button 
-                  className={`${currentProject === "pokemon-dareda" ? "active-project" : ""} project-button`}
+                  className={`${currentProject === "pokemon-dareda" ? "active-project" : ""}`}
                   onClick={() => selectProject('pokemon-dareda')}>Pokémon "Dare Da?"</button></li>
 
               <li className="project-names">
                 <button 
-                  className={`${currentProject === "vvg" ? "active-project" : ""} project-button`}
+                  className={`${currentProject === "vvg" ? "active-project" : ""}`}
                   onClick={() => selectProject('vvg')}>Void's Virtual Grimoire</button></li>
 
               <li className="project-names">
                 <button 
-                  className={`${currentProject === "full-stack-blog" ? "active-project" : ""} project-button`}
-                  onClick={() => selectProject('full-stack-blog')}>The Circuit Bluetooth Blog Animal Posting Website For People Over 9000 16.2.0 (A Full Stack Blog App)</button></li>
+                  className={`${currentProject === "full-stack-blog" ? "active-project" : ""}`}
+                  onClick={() => selectProject('full-stack-blog')}>"The Circuit Bluetooth Blog Animal Posting Website For People Over 9000 16.2.0"<br /><br />(A Full Stack Blog App)</button></li>
 
               <li className="project-names"><button 
-                  className={`${currentProject === "ehr" ? "active-project" : ""} project-button`}
+                  className={`${currentProject === "ehr" ? "active-project" : ""}`}
                   onClick={() => selectProject('ehr')}>Eleventh Hour Rescue (Redesign)</button></li>
 
               <li className="project-names"><button 
-                  className={`${currentProject === "apotheCo" ? "active-project" : ""} project-button`}
+                  className={`${currentProject === "apotheCo" ? "active-project" : ""}`}
                   onClick={() => selectProject('apotheCo')}>ApotheCo</button></li>
 
               <li className="project-names"><button 
-                  className={`${currentProject === "voids-portfolio" ? "active-project" : ""} project-button`}
+                  className={`${currentProject === "voids-portfolio" ? "active-project" : ""}`}
                   onClick={() => selectProject('voids-portfolio')}>Void's Portfolio Site</button></li>
             </ul>
           </div>
           
           <div className="right-is-project" style={{backgroundImage: `url(${projImg})`}}>
-            
+            <button className="live-site"><Link to={projLink}>Live Site</Link></button>
+            <button ClassName="view-code"><Link to={projCode}>View Code</Link></button>
           </div>
         </div>
       }
@@ -104,6 +106,7 @@ export default function Projects() {
           </div>
 
           <div className="right-is-project">
+            
             
           </div>
         </div>

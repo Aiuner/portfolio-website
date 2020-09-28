@@ -24,3 +24,24 @@
   background: #006a85;
   box-shadow: inset -10px 0 10px -10px black;
 }
+
+.projects button {
+  width: 90%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+
+  background-color: inherit;
+  color: #100B09;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.active-project {
+  color: white !important;
+  text-shadow: 0 0 3px white;
+  background: linear-gradient(90deg, rgba(1,166,207,0) 0%, rgba(1,166,207,1) 50%, rgba(1,166,207,0) 100%);
+}
