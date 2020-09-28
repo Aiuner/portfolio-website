@@ -16,6 +16,16 @@
   width: 16vw;
 }
 
+.title {
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.descriptors {
+  font-size: 14px;
+  line-height: 14px;
+}
+
 nav {
   min-height: 63vh;
 }

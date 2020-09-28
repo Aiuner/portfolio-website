@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/contactme.css';
 
@@ -15,7 +16,11 @@ export default function ContactMe() {
       </div>
 
       <div className="content">
-        <p>Something here.</p>
+        <ul className="contact-info">
+          <li>Discord: ﴾ Ṿ☼ЇƉ ﴿ [they/them]#9441</li>
+          <li>GitHub: <Link to="https://github.com/Aiuner" className="contact-link">Aiuner</Link></li>
+          <li>LinkedIn: <Link to="https://www.linkedin.com/in/cassandradoeinck/" className="contact-link">Cassandra Doeinck</Link></li>
+        </ul>
       </div>
     </>
   );

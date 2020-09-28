@@ -5,19 +5,14 @@ import Layout from './layouts/Layout';
 import About from './screens/About';
 import Projects from './screens/Projects';
 import ContactMe from './screens/ContactMe';
-import Home from './screens/Home';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <Layout>
       <Switch>
-        <Route path='/about'>
-          <About />
-        </Route>
-
         <Route path='/projects'>
           <Projects />
         </Route>
@@ -26,8 +21,8 @@ function App() {
           <ContactMe />
         </Route>
 
-        <Route path='/' >
-          <Home />
+        <Route path='/'>
+          <About />
         </Route>
       </Switch>
     </Layout>

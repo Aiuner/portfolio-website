@@ -79,10 +79,10 @@ export default function About() {
 
             <h1 className="skill-section">Miscellaneous</h1>
             <ul className="skills">
-              <li>Research</li>
-              <li>Writing</li>
               <li>Creative Problem Solving</li>
+              <li>Research</li>
               <li>Teaching</li>
+              <li>Writing</li>
             </ul>
           </div>
         </div>

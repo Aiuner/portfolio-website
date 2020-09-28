@@ -45,11 +45,15 @@ main {
 
 .tab-placeholder-text {
   padding-left: 16px;
+  display: inline-block;
+  margin: 0;
 
-  color: #100B09;
   font-weight: bold;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 42px;
+  color: white;
+  text-shadow: 0 0 3px white;
+  background: linear-gradient(90deg, rgba(1,166,207,0) 0%, rgba(1,166,207,1) 50%, rgba(1,166,207,0) 100%);
 }
 
 .tab button {
