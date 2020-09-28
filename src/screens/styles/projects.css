@@ -19,7 +19,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 
   background-size: 100%;
   background-repeat: no-repeat;
@@ -27,6 +27,7 @@
 
 .right-is-project button {
   width: 20%;
+  margin-top: 2vh;
   border: none;
   outline: none;
   cursor: pointer;

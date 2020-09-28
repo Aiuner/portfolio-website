@@ -5,6 +5,7 @@ import dareDa from '../assets/pokemon-dareda/dareda.png';
 import vvg from '../assets/vvg/vvg.png';
 import fsbImg from '../assets/full-stack-blog/full-stack-blog-home.png';
 import ehr from '../assets/ehr/ehr.png';
+import apotheco from '../assets/apotheCo/apotheco.png';
 
 
 import './styles/projects.css';
@@ -14,7 +15,7 @@ export default function Projects() {
   const [currentTab, updateCurrentTab] = useState('CodingProjects');
 
   const [displayedProject, updateDisplayedProject] = useState('pokemon-dareda');
-  const [currentProject, updateCurrentProject] = useState('pokemon-dareda');
+  const [currentProject, updateCurrentProject] = useState(displayedProject);
 
   const [projImg, updateProjImg] = useState(dareDa);
   const [projLink, updateProjLink] = useState('https://aiuner.github.io/Pokemon-DareDa/');
@@ -52,7 +53,7 @@ export default function Projects() {
         updateProjCode('https://github.com/Aiuner/Eleventh-Hour-Rescue-Redesign');
         break;
       case 'apotheCo':
-        updateProjImg('');
+        updateProjImg(apotheco);
         updateProjLink('https://musing-nightingale-ab990b.netlify.app/');
         updateProjCode('https://github.com/Aiuner/ApotheCo');
         break;
@@ -79,7 +80,7 @@ export default function Projects() {
     <>
       <div className="tab">
         <button className={currentTab === "CodingProjects" ? "active-tab" : ""} onClick={() => openTab('CodingProjects')}>Coding Projects</button>
-        <button className={currentTab === "OtherProjects" ? "active-tab" : ""} onClick={() => openTab('OtherProjects')}>Digital Art Projects</button>
+        <button className={currentTab === "OtherProjects" ? "active-tab" : ""} onClick={() => openTab('OtherProjects')}>Asset & Art Creation</button>
       </div>
 
       { tabView === 'CodingProjects' && 
@@ -126,12 +127,15 @@ export default function Projects() {
         <div id="OtherProjects" className="content project-grid">
           <div className="left-is-list">
             <ul className="projects">
-              <li className="project-names">Trials of the Gauntlet</li>
+              <li className="project-names"><button 
+                  className={`${currentProject === "totg" ? "active-project" : ""}`}
+                  onClick={() => selectProject('totg')}>Trials of the Gauntlet</button></li>
             </ul>
           </div>
 
           <div className="right-is-project">
-            
+            <button className="live-site"><Link to={projLink}>View Content</Link></button>
+            <button ClassName="view-code"><Link to={projCode}>View Assets</Link></button>
             
           </div>
         </div>
