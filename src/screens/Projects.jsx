@@ -26,7 +26,7 @@ export default function Projects() {
   }
 
   const selectProject = (name) => {
-    switch(displayedProject) {
+    switch(name) {
       case 'pokemon-dareda':
         updateProjImg('');
         updateProjLink('https://aiuner.github.io/Pokemon-DareDa/');
