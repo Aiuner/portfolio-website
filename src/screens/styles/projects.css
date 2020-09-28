@@ -1,0 +1,26 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.left-is-list {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.right-is-project {
+  width: 100%;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-names {
+  margin: 3px 0;
+  padding: 2px 0;
+
+  border: 1px solid black;
+  background: #006a85;
+  box-shadow: inset -10px 0 10px -10px black;
+}
