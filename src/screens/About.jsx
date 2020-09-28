@@ -4,6 +4,7 @@ import './styles/about.css';
 
 export default function About() {
   const [tabView, setTabView] = useState('Summary');
+  const [currentTab, updateCurrentTab] = useState('Summary')
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,15 +12,16 @@ export default function About() {
 
   const openTab = (tab) => {
     setTabView(tab);
+    updateCurrentTab(tab);
   }
 
   return (
     <>
       <div className="tab">
-        <button onClick={() => openTab('Summary')}>Summary</button>
-        <button onClick={() => openTab('Background')}>Background</button>
-        <button onClick={() => openTab('Skills')}>Skills</button>
-        <button onClick={() => openTab('Interests')}>Interests</button>
+        <button className={currentTab === "Summary" ? "active-tab" : ""} onClick={() => openTab('Summary')}>Summary</button>
+        <button className={currentTab === "Background" ? "active-tab" : ""} onClick={() => openTab('Background')}>Background</button>
+        <button className={currentTab === "Skills" ? "active-tab" : ""} onClick={() => openTab('Skills')}>Skills</button>
+        <button className={currentTab === "Interests" ? "active-tab" : ""} onClick={() => openTab('Interests')}>Interests</button>
       </div>
 
       { tabView === 'Summary' && 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Projects() {
   const [tabView, setTabView] = useState('CodingProjects');
+  const [currentTab, updateCurrentTab] = useState('CodingProjects');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -9,13 +10,14 @@ export default function Projects() {
 
   const openTab = (tab) => {
     setTabView(tab);
+    updateCurrentTab(tab);
   }
 
   return (
     <>
       <div className="tab">
-        <button onClick={() => openTab('CodingProjects')}>Coding Projects</button>
-        <button onClick={() => openTab('OtherProjects')}>Other Projects</button>
+        <button className={currentTab === "CodingProjects" ? "active-tab" : ""} onClick={() => openTab('CodingProjects')}>Coding Projects</button>
+        <button className={currentTab === "OtherProjects" ? "active-tab" : ""} onClick={() => openTab('OtherProjects')}>Other Projects</button>
       </div>
 
       { tabView === 'CodingProjects' && 
