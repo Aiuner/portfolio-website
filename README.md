@@ -108,6 +108,7 @@ _The MVP was to have a functional interface with information on Aiuner's previou
 |    "     | Write Up and Add Background      |    H     |     2 hrs      |     8 hrs*    |  27.25 hrs  |
 |    "     | Add & Style Skills               |    H     |      1 hr      |   <0.5 hrs    | ~27.75 hrs  |
 |  -----   | MVP TOTAL                        |  -----   |   17.25 hrs    |     -----     | ~27.75 hrs  |
+
 *I did not have the Background prepared in advance. Writing about myself is very difficult for me, and ended up taking up the entire time.
 
 <br>
