@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import dareDa from '../assets/pokemon-dareda/dareda.png';
 import vvg from '../assets/vvg/vvg.png';
@@ -70,7 +69,9 @@ export default function Projects() {
         break;
       // default condition
       default:
-        break;
+        updateProjImg(dareDa);
+        updateProjLink('https://aiuner.github.io/Pokemon-DareDa/');
+        updateProjCode('https://github.com/Aiuner/Pokemon-DareDa');
     }
     updateDisplayedProject(name);
     updateCurrentProject(name);
@@ -80,7 +81,7 @@ export default function Projects() {
     <>
       <div className="tab">
         <button className={currentTab === "CodingProjects" ? "active-tab" : ""} onClick={() => openTab('CodingProjects')}>Coding Projects</button>
-        <button className={currentTab === "OtherProjects" ? "active-tab" : ""} onClick={() => openTab('OtherProjects')}>Asset & Art Creation</button>
+        <button className={currentTab === "ArtAssetProjects" ? "active-tab" : ""} onClick={() => openTab('ArtAssetProjects')}>Asset & Art Creation</button>
       </div>
 
       { tabView === 'CodingProjects' && 
@@ -117,14 +118,14 @@ export default function Projects() {
           </div>
           
           <div className="right-is-project" style={{backgroundImage: `url(${projImg})`}}>
-            <button className="live-site"><Link to={projLink}>Live Site</Link></button>
-            <button ClassName="view-code"><Link to={projCode}>View Code</Link></button>
+            <button className="live-site"><a href={projLink}>Live Site</a></button>
+            <button ClassName="view-code"><a href={projCode}>View Code</a></button>
           </div>
         </div>
       }
 
-      { tabView === 'OtherProjects' &&
-        <div id="OtherProjects" className="content project-grid">
+      { tabView === 'ArtAssetProjects' &&
+        <div id="ArtAssetProjects" className="content project-grid">
           <div className="left-is-list">
             <ul className="projects">
               <li className="project-names"><button 
@@ -134,8 +135,8 @@ export default function Projects() {
           </div>
 
           <div className="right-is-project">
-            <button className="live-site"><Link to={projLink}>View Content</Link></button>
-            <button ClassName="view-code"><Link to={projCode}>View Assets</Link></button>
+            <button className="live-site"><a href={projLink}>View Content</a></button>
+            <button ClassName="view-code"><a href={projCode}>View Assets</a></button>
             
           </div>
         </div>
